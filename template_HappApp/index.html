@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HapApp</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            background-color: black;
+            color: white;
+        }
+        .container
+        {
+            width: 98.5vw;
+            height: 100%;
+        
+        }
+        .navbar{
+            font-size: 25px;
+            height: 70px;
+            width: 100%;
+            color: white;
+            background-attachment: fixed;
+            display: flex;
+            justify-content:center;
+            flex-direction:column;
+            flex-wrap: wrap;
+            z-index: 1;
+            position: fixed;
+            background-color:black;
+           padding-left: 10vw;
+           padding-top: 1vh;
+        }
+        .heading{
+            width: 48vw;
+        }
+        img{
+            width: 150px;
+            height: 50px;
+        }
+        .heading-button{
+            padding-left: 20vw;
+            width: 48vw;
+        }
+        input[type="button"]{
+            width: 140px;
+            height: 50px;
+            border-radius: 35px;
+            background-color:#33312B;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+        input[type="button"]:hover{
+            color: black;
+            font-weight: 600;
+            background-color: white;
+        }
+        .body-part1{
+        width: 60w;
+        height: 90%;
+        display: flex;
+        padding-top: 25vh;
+        padding-left: 18vw;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        }
+        .bodypart1-content{
+            width: 38vw;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 12vh;
+        }
+        h1{
+            font-size: 80px;
+            font-weight:900;
+            line-height: 85px;
+        }
+        p{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }  
+        .buttoncontent {
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        display: flex;
+        width: 300px;
+        color: white;
+        padding: 10px;
+        height: 60px;
+        background-color: #33312B;
+        border-radius:50px;
+}
+        .button {
+        border-radius: 40px; 
+        text-decoration: none; 
+        padding: 0px 20px;
+        font-size: 20px;
+        width: 300px;
+        
+}
+.buttonsubheader{
+    font-size: 15px;
+}
+        .bodypart1-image{
+            width: 40vw;
+        }
+        .bodypart1-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart2-content{
+            margin-left: 10px;
+            width: 99%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 25vh;
+            text-align: center;
+           
+        }
+        h2{
+            font-size:52px;
+        }
+        .bodypart2-image{
+            width: 100%;
+        }
+        .bodypart2-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart3-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        .bodypart3-image{
+            width: 100%;
+        }
+        .bodypart3-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart4-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        .bodypart4-image{
+            width: 100%;
+        }
+        .bodypart4-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart5-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+            background-color: #6161F2;
+            padding: 20px;
+        }
+
+        .bodypart5-image{
+            width: 100%;
+        }
+        .bodypart5-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart6-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        .bodypart6-image{
+            width: 100%;
+        }
+        .bodypart6-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart7-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        .bodypart7-image{
+            width: 100%;
+        }
+        .bodypart7-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodypart8-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        .bodypart8-image{
+            width: 100%;
+        }
+        .bodypart8-image img{
+            width: 350px;
+            height: 700px;
+            border-radius: 20px;
+        }
+        .bodylast-content{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15vh;
+            text-align: center;
+        }
+        .last1{
+            padding-top: 300px;
+        }
+        input[type="email"]
+        {
+            padding: 15px;border-radius: 30px;width: 45%;height: 25px;border: 1px solid black;
+        }
+        .options
+        {
+            display: flex;justify-content: space-evenly;flex-wrap: wrap;
+        }
+        .option1{
+            float: left;margin-left: 100px;width: 170px;
+        }
+        .icon{
+            background-color:white;padding: 20px;width: 35px;height: 35px;
+        }
+        .icon:hover{
+            background-color: black; padding: 20px;border-radius: 50%;transition: 0.3s;
+        }
+        .option2{
+            margin-right: 20px;text-align: center;width: 170px;
+        }
+        .option3{
+            margin-right: 20px;text-align: center;width: 170px;
+        }
+        .option4{
+            margin-right: 20px;text-align: center;width: 170px;
+        }
+        .option5{
+           margin-right: 20px;text-align: center;width: 170px;
+        } 
+        .footer
+        {
+           padding-left: 10vw; 
+           color: #929595;
+           display: flex;
+           background-color: #F0F8FF;
+        }
+        /*media queries*/
+
+
+        /*for small mobiles*/
+        @media screen and (min-width:0px) and (max-width:320px) {
+    .navbar{
+    gap: 250px;
+    padding-left: 20px;
+    }
+   
+    html,body{
+    width: 100%;
+  }
+    .body-part1{
+    padding: 0;
+        width: 220%;
+    }
+    .bodypart1-content
+    {
+    padding-top: 70px;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .button{
+        margin-left:30vw;
+    width: 400px;
+     }
+    .buttoncontent{
+       padding-left: 50px;
+    width: 100%;
+    text-align: center;
+    }
+    .bodypart1-image                   
+    {                   
+    padding-top: 150px;                        
+    width: 220%; 
+    display: flex;    
+    justify-content:center;                   
+    }
+    .bodypart1-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart2-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart3-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart4-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart5-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart6-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart7-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart8-image img{
+        width: 450px;
+        height: 900px;
+    }
+    .bodypart2-content{
+    width: 220%;
+    }
+    .bodypart3-content{
+    width: 220%;
+    }
+    .bodypart4-content{
+    width: 220%;
+    }
+    .bodypart5-content{
+    width: 209%;
+    }
+    .bodypart6-content{
+    width: 220%;
+    }
+    .bodypart7-content{
+    width: 220%;
+    }
+    .bodypart8-content{
+    width: 220%;
+    }
+    .bodylast-content{
+    width: 220%;
+    }
+    .footer{
+    width: 213%;
+    }
+    
+  
+                    
+                    }
+        /*for medium mobiles*/
+        @media screen and (min-width: 321px) and (max-width:375px)  {
+            .navbar{
+                padding-top: 10px;
+               
+                gap: 350px;
+    }
+    html,body.container{
+        width: 100%;
+    }
+    .body-part1{
+        text-align: center;
+        padding: 10px;
+    padding-top: 150px;
+        width: 220%;
+    }
+    .button{
+        padding-top: 20px;
+        display: flex;
+        padding-bottom: 30px;
+        padding-left: 40px;
+    }
+    .bodypart1-content{
+        width: 100%;
+    }
+    .bodypart1-image{
+        width: 100%;
+    }
+    .bodypart1-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart2-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart3-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart4-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart5-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart6-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart7-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart8-image img{
+        width: 600px;
+        height: 1200px;
+    }
+    .bodypart2-content{
+        text-align: center;
+        width: 220%;
+    }
+    .bodypart3-content{
+        padding-left: 10px;
+        width: 220%;
+    }
+    .bodypart4-content{
+        width: 220%;
+    }
+    .bodypart5-content{
+        width: 229%;
+    }
+    .bodypart6-content{
+        width: 220%;
+       padding-left: 10px;
+    }
+    .bodypart7-content{
+        width: 220%;
+        padding-left: 20px;
+    }
+    .bodypart8-content{
+        width: 220%;
+        padding-left: 20px;
+    }
+    .bodylast-content{
+    width: 220%;
+    }
+    .footer{
+        width: 230%;
+    }
+   
+}
+/*for large mobiles*/
+@media screen and (min-width: 376px) and (max-width:425px) {
+    .navbar{
+        gap: 330px;
+        padding-top: 10px;
+    }
+    .heading-button input[type="button"]{
+        font-size: 20px;
+        height: 50px;
+       height: 50px;
+        
+    }
+    html,body{
+   width: 100%;
+  }
+  
+  .body-part1{
+        text-align: center;
+        padding: 10px;
+    padding-top: 150px;
+        width: 220%;
+  }
+        .bodypart1-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    p{
+        font-size: 35px;
+    }
+    .button{
+        padding-top: 20px;
+        display: flex;
+        margin-left: 40px;
+        padding-bottom: 30px;
+    }
+    .bodypart1-content{
+        width: 100%;
+    }
+    .bodypart1-image{
+        width: 100%;
+    }
+    .bodypart2-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart3-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart4-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart5-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart6-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart7-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart8-image img{
+        width: 650px;
+        height: 1300px;
+    }
+    .bodypart2-content{
+        text-align: center;
+        width: 220%;
+    }
+    .bodypart3-content{
+        padding-left: 10px;
+        width: 220%;
+    }
+    
+    .bodypart4-content{
+        width: 220%;
+    }
+    .bodypart5-content{
+        width: 220%; 
+    }
+    .bodypart6-content{
+        width: 220%;
+       padding-left: 10px;
+    }
+    .bodypart7-content{
+        width: 220%;
+        padding-left: 10px;
+    }
+    .bodypart8-content{
+        width: 220%;
+        padding-left: 10px;
+    }
+    .bodylast-content{
+    width: 220%;
+    padding-left: 10px;
+    }
+    input[type="email"]
+    {
+        height: 30px;
+        font-size: 20px;
+    }
+    .bodypartlast-content input[type="button"]{
+        font-size: 25px;
+        
+    }
+    .footer{
+        width: 220%;
+    }
+}
+/*for  small laptops*/
+@media screen and (min-width:425px) and (max-width:500px){
+    html,body{
+   width: 100%;
+  }
+  .heading-button input[type="button"]{
+        font-size: 20px;
+        height: 50px;
+       height: 50px;
+        
+    }
+  .navbar{
+    padding-top: 10px;
+    padding-left: 50px;
+    gap:400px;
+  }
+  .body-part1{
+        padding: 30px;
+    padding-top: 150px;
+        width: 220%;
+  }
+  .bodypart1-content{
+    padding-top: 70px;
+    width: 50%;
+  }
+  .bodypart1-image{
+    width: 50%;
+  }
+  .bodypart1-image img{
+        width: 500px;
+        height: 1000px;
+    }
+    p{
+    font-size: 40px;
+  }
+    .bodypart2-content{
+   width: 230%;
+  }
+  .bodypart2-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart3-content{
+   width: 230%;
+  }
+  .bodypart3-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart4-content{
+   width: 230%;
+  }
+  .bodypart4-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart5-content{
+   width: 230%;
+  }
+  .bodypart5-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart6-content{
+   width: 230%;
+  }
+  .bodypart6-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart7-content{
+   width: 230%;
+   padding-left: 15px;
+  }
+  .bodypart7-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart8-content{
+   width: 230%;
+   padding-left: 15px;
+  }
+  .bodypart8-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodylast-content{
+    width: 230%;
+  }
+  .footer{
+    width: 229%;
+  }
+}/*for aaverage laptop*/
+@media screen and (min-width:501px) and (max-width:768px){
+    html,body{
+   width: 100%;
+  }
+  .navbar{
+    padding-left: 50px;
+    gap:800px;
+    height: 100px;
+  }
+  .body-part1{
+        padding: 30px;
+    padding-top: 150px;
+        width: 230%;
+  }h1{
+    font-size: 100px;
+  }
+  h2{
+    font-size: 70px;
+  }
+  .bodypart1-content{
+    padding-top: 150px;
+    width: 40%;
+    padding-left: 120px; 
+  }
+  .button{
+    padding-top: 15px;
+padding-left: 10px;
+    display: flex;
+  }
+  .bodypart1-image{
+    padding-left: 50px;
+    width: 50%;
+  }
+  .bodypart1-image img{
+        width: 550px;
+        height: 1100px;
+    }
+    p{
+    font-size: 40px;
+  }
+    .bodypart2-content{
+   width: 237%;
+  }
+  .bodypart2-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart3-content{
+    width: 237%;
+  }
+  .bodypart3-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart4-content{
+    width: 237%;
+  }
+  .bodypart4-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart5-content{
+   width: 234%;
+  }
+  .bodypart5-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart6-content{
+   width: 237%;
+  }
+  .bodypart6-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart7-content{
+   width: 237%;
+   padding-left: 15px;
+  }
+  .bodypart7-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodypart8-content{
+   width: 237%;
+   padding-left: 15px;
+  }
+  .bodypart8-image img{
+    width: 600px;
+    height: 1200px;
+  }
+  .bodylast-content{
+    width: 237%;
+  }
+  .footer{
+    width: 230%;
+  }
+}
+/*for PC*/
+@media screen and (min-width:769px) and (max-width:1024px){
+    html,body{
+   width: 100%;
+  }
+  .body-part1{
+    width: 100%;
+  }
+  .bodypart2-content{
+    width: 117%;
+  }
+  .bodypart2-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+.bodypart3-content{
+    width: 117%;
+  }
+  .bodypart3-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodypart4-content{
+    width: 117%;
+  }
+  .bodypart4-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodypart5-content{
+    width: 114%;
+  }
+  .bodypart5-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodypart6-content{
+    width: 117%;
+  }
+  .bodypart6-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodypart7-content{
+    width: 117%;
+  }
+  .bodypart7-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodypart8-content{
+    width: 117%;
+  }
+  .bodypart8-image img
+  {
+    width: 550px;
+    height: 1100px;
+  }
+  .bodylast-content{
+    width: 118%;
+  }
+.footer{
+    width: 108%;
+}
+}
+@media screen and (min-width:1025px) and (max-width:1440px) {
+   .bodypart5-content{
+    width: 97%;   }
+    .footer{
+        width: 90%;
+    }
+    }
+    
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<div class="navbar">
+    <div class="heading">
+       <img src="image/logo.jpg" alt="Logo">
+    </div>
+    <div class="heading-button">
+        <a href="#"><input type="button" value="Get the app"></a>
+    </div>
+</div>
+
+<div class="body-part1">
+  <div class="bodypart1-content">
+    <strong class="bold-text"><h1>MEET LOCALLY, EXPLORE GLOBALLY</h1></strong><br>
+    <P>Find creatives and like-minded people
+    nearby and around the world.</p>
+    <div class="button">
+    <a href="#email"  class="button w-inline-block"><div class="buttoncontent"><img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b871b_apple.svg" loading="lazy" width="40" height="40" alt="This icon is not available" class="buttonicon" style="box-shadow: none;"><div class="buttontext"><div class="buttonsubheader">Get on</div><div class="buttonaction">App Store</div></div></div></a>
+    <a href="#email" class="button w-inline-block"><div class="buttoncontent">
+    <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8730_googleplay.svg" loading="lazy" width="40" height="40" alt="" class="buttonicon" style="box-shadow: none;"><div class="buttontext"><div class="buttonsubheader">Get on</div><div class="buttonaction">Google Play</div></div></div></a>
+  </div></div>
+  <div class="bodypart1-image">
+    <img src="image/Account.jpg" alt="Account" width="100%">
+  </div>
+</div>
+<br>
+<div class="bodypart2-content">
+    <strong><h2>SEE WHO IS AROUND WITH THE REAL-TIME DISTANCE</h2></strong>
+    <p>From passionate enthusiasts to industry professionals, unlock local connections wherever you are.</p><br>
+    <div class="bodypart2-image" id="Tickets">
+     <img src="image/My Tickets.jpg" alt="My Tickets" width="100%">
+</div>
+    </div>
+    <div class="bodypart3-content">
+        <strong><h2>JOIN HUNDREDS OF LOCAL AND GLOBAL COMMUNITIES</h2></strong>
+            <p>From local groups to global circles, you'll never feel disconnected</p>
+            <div class="bodypart3-image">
+             <img src="image/Event Details aamir.jpg" alt="This photo is not available right now" width="300vw" height="600vh"></div>
+    </div>
+    <div class="bodypart4-content"><strong><h2>CREATE COMMUNITY THAT INSPIRES TO MEET</h2></strong>
+        <p>Let your people see where other members are. Share media on community profile. Engage conversations and collaborations with community chat.</p>
+        <div class="bodypart4-image">
+        <img src="image/6531548db6c0a18c644a29ea_community_chat-p-500.png" alt="This photo is not available" height="600vh" width="300vw"></div></div>
+        <div class="bodypart5-content">
+            <strong style="font-size: 100px;"><h2>MEANINGFUL CONTACTS WITH AI-POWERED SUGGESTIONS</h2></strong>
+            <p>Go beyond random encounters. Get meaningful introductions powered by advanced AI, tailored to your interests and preferences.</p>
+            <div class="bodypart5-image">
+                <img src="image/Search result map - 3.jpg" alt="This photo is not available right now"width= "300vw" height="600vh"></div>
+        </div>
+        <div class="bodypart6-content">
+            <strong><h2>ADD LINK AND PHOTO TO YOUR PROFILE</h2></strong>
+            <p>Share your work and interests. Let others discover the multidimensional you.</p>
+            <div class="bodypart6-image"> 
+                <img src="image/Account.jpg" alt="This photo is not available Right now" width="300vw" height="600vh"></div>
+        </div>
+        <div class="bodypart7-content">
+            <strong><h1>SEARCH WITH PURPOSE</h1></strong>
+            <p>Find people by interests, skills, and location. Dive deep into communities to find connections that matter.</p>
+            <div class="bodypart7-image"> 
+            <img src="image/Searching - 7.jpg" alt="This Photo is not available right now"width="300vw" height="600vh"></div>
+        </div>
+        <div class="bodypart8-content">
+            <strong><h1>SHARE THOUGHTS WITH FOLLOWERS AND PEOPLE AROUND</h1></strong>
+            <p>Ask, invite or just say "hi" with status messages.</p>
+            <div class="bodypart8-image">
+            <img src="image/Categories - 3.jpg" alt="This Photo is not available right now" width="300vw" height="600vh"></div>
+        </div>
+        <div class="bodylast-content">
+            <strong><h2>LAST BUT NOT LEAST</h2></strong><br>
+            <div class="options">
+                <div class="option1">
+                     <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8716_battery-full.svg" loading="lazy" alt="Icon 1 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p style="font-size: 15px;">It doesn't drain battery</p>
+                </div>
+                <div class="option2"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b871c_navigation.svg" loading="lazy" alt="Icon 2 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p style="font-size: 15px;">Precise distance up to 1m</p>
+                </div>
+                <div class="option3"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8719_lock.svg" loading="lazy" alt="Icon 3 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p style="font-size: 15px;">It doesn't track location</p>
+                </div>
+                <div class="option4"> 
+                    <div class="icon1">
+                      <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8718_eye.svg" loading="lazy" alt="Icon 4 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p style="font-size: 15px;">Go invisible with one tap</p>
+                </div>
+                <div class="option5"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8717_link.svg" loading="lazy" alt="Icon 5 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p style="font-size: 15px;">Share profile via QR-code or weblink</p>
+                </div>
+                </div><br><br><br>
+                <div class="bodypartlast-content">
+                    <strong><h2>PRESENCE FOR ANDROID COMING SOON</h2></strong><br>
+                    <p>Leave your email to stay updated about release.</p><br>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="button" value="Notify me" style="cursor: pointer;">
+                </div>
+        </div><br><br><br>
+        <div class="footer">
+            <div class="name"><p style="font-size: 17px;">HapApp Social & Networking</p></div>
+            <div class="insta"> <p style="font-size: 17px;">Instagram</p></div>
+           <div class="privacy"><p style="font-size: 17px;">Privacy Policy</p></div>
+            <div class="term"><p style="font-size: 17px;">Term of use</p></div>
+            <div class="adress"><p style="font-size: 17px;">HapApp Social Technologies, Inc. <br>228 Park Ave S, Pmb 85451, <br>New York, <br> NY 10003 1 (800) 650-5580</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
